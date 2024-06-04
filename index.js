@@ -53,7 +53,7 @@ app.get("/create-people", async (req, res) => {
 app.get("/find-people", async (req, res) => {
   try {
     const data = await Person.find({
-      name: ["Daniel Finn", "Mr Yusuf", "Ernest", "Paul"],
+      name: "Daniel Finn",
     });
     console.log("People found:", data);
     res.status(200).send("People Found");
